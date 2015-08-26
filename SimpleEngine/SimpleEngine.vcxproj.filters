@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{66942591-b7a4-4239-9e64-439505bb13fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{12066160-f298-486a-ab6c-b4893fc4595e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{f0184c48-4d8d-45ef-b520-0620f75ee257}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{1ef40cef-b6f9-473e-8bbc-83e0a3117e04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader">
+      <UniqueIdentifier>{af941af0-7665-4c02-9291-76ba4a59598f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="D3D11Resource">
+      <UniqueIdentifier>{f68f1a17-a015-40b1-9cef-770aa28fc062}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SceneView">
+      <UniqueIdentifier>{0b6985aa-8b66-48f1-9b42-65d48c126bdb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{9324fa16-ac62-40be-8830-a36bff1066d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HLSLs">
+      <UniqueIdentifier>{b1e213b7-57a5-4452-b509-a3286ad8d2f4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Application.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\BaseRenderer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\DeferredRenderer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\ForwardRenderer.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer\RendererCore.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader\FXShader.cpp">
+      <Filter>Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader\Shader.cpp">
+      <Filter>Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\DynamicMesh.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\Object.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Object\StaticMesh.cpp">
+      <Filter>Object</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneView\RenderView.cpp">
+      <Filter>SceneView</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D11Resource\D3D11Resource.cpp">
+      <Filter>D3D11Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D11Resource\IndexBuffer.cpp">
+      <Filter>D3D11Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D11Resource\RenderStates.cpp">
+      <Filter>D3D11Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D11Resource\RenderTarget.cpp">
+      <Filter>D3D11Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D11Resource\Texture.cpp">
+      <Filter>D3D11Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D11Resource\VertexBuffer.cpp">
+      <Filter>D3D11Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="D3D11Resource\VertexDeclaration.cpp">
+      <Filter>D3D11Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Camera.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\d3dApp.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\d3dUtil.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\GameTimer.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\GeometryGenerator.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\LightHelper.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\MathHelper.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\Waves.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\xnacollision.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Util\DirectX11Util.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="TRefCountPtr.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\BaseRenderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\DeferredRenderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\DrawElement.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\ForwardRenderer.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer\RendererCore.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader\FXShader.h">
+      <Filter>Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader\Shader.h">
+      <Filter>Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\DynamicMesh.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\Object.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\StaticMesh.h">
+      <Filter>Object</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneView\RenderView.h">
+      <Filter>SceneView</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D11Resource\D3D11Resource.h">
+      <Filter>D3D11Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D11Resource\IndexBuffer.h">
+      <Filter>D3D11Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D11Resource\RenderStates.h">
+      <Filter>D3D11Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D11Resource\RenderTarget.h">
+      <Filter>D3D11Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D11Resource\Texture.h">
+      <Filter>D3D11Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D11Resource\VertexBuffer.h">
+      <Filter>D3D11Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D11Resource\VertexDeclaration.h">
+      <Filter>D3D11Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="D3D11Resource\VertexDefine.h">
+      <Filter>D3D11Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Camera.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\d3dApp.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\d3dUtil.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\d3dx11effect.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\GameTimer.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\GeometryGenerator.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\LightHelper.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\MathHelper.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\Waves.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Common\xnacollision.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Util\DirectX11Util.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Renderer\RendererCore.inl">
+      <Filter>Renderer</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="..\Bin\HLSLs\Basic.fx">
+      <Filter>HLSLs</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\HLSLs\BuildShadowMap.fx">
+      <Filter>HLSLs</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\HLSLs\color.fx">
+      <Filter>HLSLs</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\HLSLs\Cubemap.fx">
+      <Filter>HLSLs</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\HLSLs\DebugTexture.fx">
+      <Filter>HLSLs</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\HLSLs\LightHelper.fx">
+      <Filter>HLSLs</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\HLSLs\Lighting.fx">
+      <Filter>HLSLs</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\HLSLs\NormalMap.fx">
+      <Filter>HLSLs</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\HLSLs\ScreenQuad.fx">
+      <Filter>HLSLs</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\HLSLs\Sky.fx">
+      <Filter>HLSLs</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\HLSLs\Tessellation.fx">
+      <Filter>HLSLs</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\HLSLs\Texture.fx">
+      <Filter>HLSLs</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\HLSLs\TreeSprite.fx">
+      <Filter>HLSLs</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\HLSLs\DeferredPixelShader.hlsl">
+      <Filter>HLSLs</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\HLSLs\DeferredVertexShader.hlsl">
+      <Filter>HLSLs</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\HLSLs\FinalPassPS.hlsl">
+      <Filter>HLSLs</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\HLSLs\FinalPassVS.hlsl">
+      <Filter>HLSLs</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\HLSLs\DebugPassPS.hlsl">
+      <Filter>HLSLs</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>

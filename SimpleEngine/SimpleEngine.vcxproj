@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{700BC3D0-3398-4165-9A26-55766A14B139}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>SimpleEngine</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>$(ExecutablePath)</ExecutablePath>
+    <OutDir>..\Bin\</OutDir>
+    <IntDir>.\_Intermediate\Debug\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(DXSDK_DIR)Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(DXSDK_DIR)Lib\x86;$(LibraryPath)</LibraryPath>
+    <OutDir>..\Bin\</OutDir>
+    <IntDir>.\_Intermediate\Release\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>.\;.\Common;.\D3D11Resource;.\SceneView;.\Object;.\Renderer;.\Shader;.\Util</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d11.lib;d3dx11d.lib;D3DCompiler.lib;Effects11d.lib;dxerr.lib;dxgi.lib;dxguid.lib;%(AdditionalDependencies);d3dx9d.lib;</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+    <FxCompile>
+      <AssemblerOutputFile>
+      </AssemblerOutputFile>
+      <AssemblerOutput>
+      </AssemblerOutput>
+      <ShaderType>Effect</ShaderType>
+      <ShaderModel>5.0</ShaderModel>
+      <ObjectFileOutput>%(RelativeDir)\%(Filename).cso</ObjectFileOutput>
+    </FxCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>.\;.\Common;.\D3D11Resource;.\SceneView;.\Object;.\Renderer;.\Shader;.\Util</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>d3d11.lib;d3dx11.lib;D3DCompiler.lib;Effects11.lib;dxerr.lib;dxgi.lib;dxguid.lib;%(AdditionalDependencies);d3dx9.lib;</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+    <FxCompile>
+      <ShaderType>Effect</ShaderType>
+    </FxCompile>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+      <ObjectFileOutput>%(RelativeDir)\%(Filename).cso</ObjectFileOutput>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+    </FxCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Common\Camera.cpp" />
+    <ClCompile Include="Common\d3dApp.cpp" />
+    <ClCompile Include="Common\d3dUtil.cpp" />
+    <ClCompile Include="Common\GameTimer.cpp" />
+    <ClCompile Include="Common\GeometryGenerator.cpp" />
+    <ClCompile Include="Common\LightHelper.cpp" />
+    <ClCompile Include="Common\MathHelper.cpp" />
+    <ClCompile Include="Common\Waves.cpp" />
+    <ClCompile Include="Common\xnacollision.cpp" />
+    <ClCompile Include="D3D11Resource\D3D11Resource.cpp" />
+    <ClCompile Include="D3D11Resource\IndexBuffer.cpp" />
+    <ClCompile Include="D3D11Resource\RenderStates.cpp" />
+    <ClCompile Include="D3D11Resource\RenderTarget.cpp" />
+    <ClCompile Include="D3D11Resource\Texture.cpp" />
+    <ClCompile Include="D3D11Resource\VertexBuffer.cpp" />
+    <ClCompile Include="D3D11Resource\VertexDeclaration.cpp" />
+    <ClCompile Include="Object\DynamicMesh.cpp" />
+    <ClCompile Include="Object\Object.cpp" />
+    <ClCompile Include="Object\StaticMesh.cpp" />
+    <ClCompile Include="Renderer\BaseRenderer.cpp" />
+    <ClCompile Include="Renderer\DeferredRenderer.cpp" />
+    <ClCompile Include="Renderer\ForwardRenderer.cpp" />
+    <ClCompile Include="Renderer\RendererCore.cpp" />
+    <ClCompile Include="SceneView\RenderView.cpp" />
+    <ClCompile Include="Shader\FXShader.cpp" />
+    <ClCompile Include="Shader\Shader.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Util\DirectX11Util.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application.h" />
+    <ClInclude Include="Common\Camera.h" />
+    <ClInclude Include="Common\d3dApp.h" />
+    <ClInclude Include="Common\d3dUtil.h" />
+    <ClInclude Include="Common\d3dx11effect.h" />
+    <ClInclude Include="Common\GameTimer.h" />
+    <ClInclude Include="Common\GeometryGenerator.h" />
+    <ClInclude Include="Common\LightHelper.h" />
+    <ClInclude Include="Common\MathHelper.h" />
+    <ClInclude Include="Common\Waves.h" />
+    <ClInclude Include="Common\xnacollision.h" />
+    <ClInclude Include="D3D11Resource\D3D11Resource.h" />
+    <ClInclude Include="D3D11Resource\IndexBuffer.h" />
+    <ClInclude Include="D3D11Resource\RenderStates.h" />
+    <ClInclude Include="D3D11Resource\RenderTarget.h" />
+    <ClInclude Include="D3D11Resource\Texture.h" />
+    <ClInclude Include="D3D11Resource\VertexBuffer.h" />
+    <ClInclude Include="D3D11Resource\VertexDeclaration.h" />
+    <ClInclude Include="D3D11Resource\VertexDefine.h" />
+    <ClInclude Include="Object\DynamicMesh.h" />
+    <ClInclude Include="Object\Object.h" />
+    <ClInclude Include="Object\StaticMesh.h" />
+    <ClInclude Include="Renderer\BaseRenderer.h" />
+    <ClInclude Include="Renderer\DeferredRenderer.h" />
+    <ClInclude Include="Renderer\DrawElement.h" />
+    <ClInclude Include="Renderer\ForwardRenderer.h" />
+    <ClInclude Include="Renderer\RendererCore.h" />
+    <ClInclude Include="SceneView\RenderView.h" />
+    <ClInclude Include="Shader\FXShader.h" />
+    <ClInclude Include="Shader\Shader.h" />
+    <ClInclude Include="Singleton.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TRefCountPtr.h" />
+    <ClInclude Include="Util\DirectX11Util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Renderer\RendererCore.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="..\Bin\HLSLs\Basic.fx" />
+    <FxCompile Include="..\Bin\HLSLs\BuildShadowMap.fx" />
+    <FxCompile Include="..\Bin\HLSLs\color.fx" />
+    <FxCompile Include="..\Bin\HLSLs\Cubemap.fx" />
+    <FxCompile Include="..\Bin\HLSLs\DebugPassPS.hlsl" />
+    <FxCompile Include="..\Bin\HLSLs\DebugTexture.fx" />
+    <FxCompile Include="..\Bin\HLSLs\DeferredPixelShader.hlsl" />
+    <FxCompile Include="..\Bin\HLSLs\DeferredVertexShader.hlsl" />
+    <FxCompile Include="..\Bin\HLSLs\FinalPassPS.hlsl" />
+    <FxCompile Include="..\Bin\HLSLs\FinalPassVS.hlsl" />
+    <FxCompile Include="..\Bin\HLSLs\LightHelper.fx" />
+    <FxCompile Include="..\Bin\HLSLs\Lighting.fx" />
+    <FxCompile Include="..\Bin\HLSLs\NormalMap.fx" />
+    <FxCompile Include="..\Bin\HLSLs\ScreenQuad.fx" />
+    <FxCompile Include="..\Bin\HLSLs\Sky.fx" />
+    <FxCompile Include="..\Bin\HLSLs\Tessellation.fx" />
+    <FxCompile Include="..\Bin\HLSLs\Texture.fx" />
+    <FxCompile Include="..\Bin\HLSLs\TreeSprite.fx" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

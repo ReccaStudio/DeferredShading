@@ -1,0 +1,10 @@
+﻿Build started 2015-07-20 오후 9:59:31.
+     1>Project "C:\_Work\SimpleEngine\SimpleEngine\SimpleEngine.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(364,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+     1>Link:
+         SimpleEngine.vcxproj -> C:\_Work\SimpleEngine\Bin\SimpleEngine.exe
+     1>Done Building Project "C:\_Work\SimpleEngine\SimpleEngine\SimpleEngine.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.12

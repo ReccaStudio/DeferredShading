@@ -1,0 +1,6 @@
+#include "stdafx.h"
+#include "DynamicMesh.h"
+#include "VertexBuffer.h"
+#include "IndexBuffer.h"
+#include "FXShader.h"
+#include "VertexDeclaration.h"
