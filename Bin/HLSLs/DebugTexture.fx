@@ -1,8 +1,4 @@
-//=============================================================================
-// DebugTexture.fx by Frank Luna (C) 2008 All Rights Reserved.
-//
-// Effect used to view a texture for debugging.
-//=============================================================================
+
  
 float4x4  gWorldViewProj;
 Texture2D gDiffuseMap;
