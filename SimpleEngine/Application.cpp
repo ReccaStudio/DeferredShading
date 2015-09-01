@@ -57,13 +57,9 @@ bool Application::Init()
 		return false;
 
 	RendererCore::Instance()->InsertTexture("grass",	Texture::Create(L"Textures/grass.dds"));
-	RendererCore::Instance()->InsertTexture("water",	Texture::Create(L"Textures/water2.dds"));
-	RendererCore::Instance()->InsertTexture("WireFence", Texture::Create(L"Textures/WireFence.dds"));
-	RendererCore::Instance()->InsertTexture("Floor",	Texture::Create(L"Textures/checkboard.dds"));
 	RendererCore::Instance()->InsertTexture("Wall",		Texture::Create(L"Textures/brick01.dds"));
 	RendererCore::Instance()->InsertTexture("Mirror",	Texture::Create(L"Textures/ice.dds"));
 	RendererCore::Instance()->InsertTexture("floor2", Texture::Create(L"Textures/floor.dds"));
-	//RendererCore::Instance()->InsertTexture("stone", Texture::Create(L"Textures/stone.dds"));
 	RendererCore::Instance()->InsertTexture( "stones", Texture::Create( L"Textures/stones.dds" ) );
 	RendererCore::Instance()->InsertTexture( "bricks", Texture::Create( L"Textures/bricks.dds" ) );
 	RendererCore::Instance()->InsertTexture("desertcube1024", Texture::Create(L"Textures/desertcube1024.dds"));
